@@ -1,0 +1,14 @@
+.button {
+    -fx-background-color: #2196f3;
+    -fx-background-radius: 16;
+    -fx-text-fill: cornsilk;
+}
+
+.button:hover {
+    -fx-background-color: cornsilk;
+    -fx-background-radius: 16;
+    -fx-text-fill: #2196f3;
+    -fx-border-radius: 16;
+    -fx-border-color: #2196f3;
+    -fx-border-width: 2;
+}

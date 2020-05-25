@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: Cornsilk;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.javafx.controller.LaunchController">
+    <children>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutY="115.0" prefHeight="72.0" prefWidth="800.0" text="2048 Game" textFill="#6f0000">
+            <font>
+                <Font size="60.0" />
+            </font>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+        </Label>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutY="259.0" prefWidth="800.0" text="Your Nickname:" textFill="#6f0000">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Label>
+        <TextField fx:id="playerNameTextField" alignment="CENTER" layoutX="275.0" layoutY="328.0" prefWidth="250.0">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </TextField>
+        <Button fx:id="startButton" alignment="CENTER" contentDisplay="CENTER" layoutX="285.0" layoutY="481.0" mnemonicParsing="false" onAction="#startAction" prefHeight="70.0" prefWidth="230.0" text="New Game">
+            <font>
+                <Font size="32.0" />
+            </font>
+        </Button>
+    </children>
+</Pane>

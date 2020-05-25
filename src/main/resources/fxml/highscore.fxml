@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: cornsilk;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.javafx.controller.HighScoreController">
+    <children>
+        <TableView fx:id="highScoreTable" editable="true" layoutX="100.0" layoutY="74.0" prefHeight="400.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="player" prefWidth="200.0" text="Player" />
+                <TableColumn fx:id="steps" prefWidth="50.0" text="Steps" />
+                <TableColumn fx:id="duration" prefWidth="100.0" text="Duration" />
+                <TableColumn fx:id="created" prefWidth="295.0" text="Date" />
+            </columns>
+        </TableView>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutY="32.0" prefWidth="800.0" text="High Scores" textFill="#6f0000">
+            <font>
+                <Font size="22.0" />
+            </font>
+        </Label>
+        <Button layoutX="340.0" layoutY="500.0" mnemonicParsing="false" onAction="#handleCloseButton" prefHeight="51.0" prefWidth="122.0" text="Close" />
+    </children>
+</Pane>
