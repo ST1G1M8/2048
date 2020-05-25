@@ -8,6 +8,7 @@ import java.util.Random;
 /**
  * Class which represents matrixes.
  */
+
 @Slf4j
 public class Matrix {
 
@@ -27,15 +28,15 @@ public class Matrix {
     }
 
     /**
-     * From the zero elements of the <code>actualMatrix</code> a random zero turns into a 2 or 4.
+     * From the zero elements of the <code>actualMatrix</code> a random zero turns into a 2 or a 4.
      *
      * @param actualMatrix A matrix which contains integers.
      */
 
     public static void add(int actualMatrix[][]){
         int zeros = 0;
-        ArrayList<Integer> indexrow = new ArrayList<>();
-        ArrayList<Integer> indexcol = new ArrayList<>();
+        ArrayList<Integer> indexrow = new ArrayList<Integer>();
+        ArrayList<Integer> indexcol = new ArrayList<Integer>();
         for(int i = 0;i<actualMatrix.length;i++){
             for(int j = 0;j<actualMatrix.length;j++){
                 if(actualMatrix[i][j] == 0 ){
@@ -115,6 +116,7 @@ public class Matrix {
                 actualMatrix[j][i] = temp;
             }
         }
+
     }
 
     /**

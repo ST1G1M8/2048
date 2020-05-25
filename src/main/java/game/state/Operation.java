@@ -58,7 +58,7 @@ public class Operation {
                 }
             }
         }
-        if(azonosak){
+        if(azonosak) {
             vege1=true;
         }else{
             add(actualMatrix);
