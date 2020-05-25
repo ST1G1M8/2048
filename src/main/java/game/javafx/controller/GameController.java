@@ -236,9 +236,9 @@ public class GameController {
         for(int i=0;i<16;i++){
             if(labels.get(i).getText().equals("2048")){
 
-                log.info("Játék vége: Ön nyert!");
                 solv = true;
-                log.info("Game is over");
+                log.info("Game Over");
+                log.info("You Win");
                 log.debug("Saving result to database...");
                 gameResultDao.persist(createGameResult());
 
@@ -250,16 +250,16 @@ public class GameController {
         }
 
         if(vege1==true && vege2==true && vege3==true && vege4==true){
-            log.info("Játék vége: Ön vesztett!");
+
             solv = false;
+            log.info("Game Over");
+            log.info("You Lose");
 
             fxmlLoader.setLocation(getClass().getResource("/fxml/highscore.fxml"));
             Parent root = fxmlLoader.load();
             rootPane.getChildren().setAll(root);
 
-
         }
-
 
     }
 
@@ -293,10 +293,7 @@ public class GameController {
     public void handleExitButton(ActionEvent actionEvent) throws IOException {
         String buttonText = ((Button) actionEvent.getSource()).getText();
         log.debug("{} is pressed", buttonText);
-        if (buttonText.equals("Give up")) {
-            log.info("The game has been given up");
-            log.info("Exiting game...");
-        }
+        log.info("Exiting game...");
         Platform.exit();
     }
 
