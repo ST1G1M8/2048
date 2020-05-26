@@ -9,18 +9,20 @@ import static game.state.Matrix.*;
 public class Operation {
 
     /**
-     * These variables represent the opportunity if we can move to the given direction or not.
-     * If it is possible to move they give false if it is not they give true.
+     * These variables represent the possibility
+     * if we can move to the given direction or not.
+     * If it is possible to move they give false
+     * otherwise they give true.
      */
 
-    public static boolean vege1=false;
-    public static boolean vege2=false;
-    public static boolean vege3=false;
-    public static boolean vege4=false;
+    public static boolean endLeft = false;
+    public static boolean endRight = false;
+    public static boolean endBottom = false;
+    public static boolean endTop = false;
 
     /**
      * This method adds the elements in the matrix.
-     * The values go to the left.
+     * The sum goes to the left side of the matrix.
      *
      * @param actualMatrix A matrix which contains integers.
      */
@@ -37,8 +39,9 @@ public class Operation {
     }
 
     /**
-     * This method adds the elements in the matrix and gives another not zero element.
-     * The values go to the left.
+     * This method adds the elements in the matrix
+     * and gives another not zero element.
+     * The sum goes to the left side of the matrix.
      *
      * @param actualMatrix A matrix which contains integers.
      */
@@ -59,20 +62,21 @@ public class Operation {
             }
         }
         if(azonosak) {
-            vege1=true;
+            endLeft=true;
         }else{
             add(actualMatrix);
-            vege1=false;
-            vege2=false;
-            vege3=false;
-            vege4=false;
+            endLeft=false;
+            endRight=false;
+            endBottom=false;
+            endTop=false;
         }
     }
 
 
     /**
-     * This method adds the elements in the matrix and gives another not zero element.
-     * The values go to the right.
+     * This method adds the elements in the matrix
+     * and gives another not zero element.
+     * TThe sum goes to the right side of the matrix.
      *
      * @param actualMatrix A matrix which contains integers.
      */
@@ -98,20 +102,21 @@ public class Operation {
             }
         }
         if(azonosak){
-            vege2=true;
+            endRight=true;
         }else{
             add(actualMatrix);
-            vege1=false;
-            vege2=false;
-            vege3=false;
-            vege4=false;
+            endLeft=false;
+            endRight=false;
+            endBottom=false;
+            endTop=false;
         }
     }
 
 
     /**
-     * This method adds the elements in the matrix and gives another not zero element.
-     * The values go to the bottom.
+     * This method adds the elements in the matrix
+     * and gives another not zero element.
+     * The sum goes to the bottom side of the matrix.
      *
      * @param actualMatrix A matrix which contains integers.
      */
@@ -136,20 +141,21 @@ public class Operation {
             }
         }
         if(azonosak){
-            vege3=true;
+            endBottom=true;
         }else{
             add(actualMatrix);
-            vege1=false;
-            vege2=false;
-            vege3=false;
-            vege4=false;
+            endLeft=false;
+            endRight=false;
+            endBottom=false;
+            endTop=false;
         }
     }
 
 
     /**
-     * This method adds the elements in the matrix and gives another not zero element.
-     * The values go to the top.
+     * This method adds the elements in the matrix
+     * and gives another not zero element.
+     * The sum goes to the top side of the matrix.
      *
      * @param actualMatrix A matrix which contains integers.
      */
@@ -174,13 +180,13 @@ public class Operation {
             }
         }
         if(azonosak){
-            vege4=true;
+            endTop=true;
         }else{
             add(actualMatrix);
-            vege1=false;
-            vege2=false;
-            vege3=false;
-            vege4=false;
+            endLeft=false;
+            endRight=false;
+            endBottom=false;
+            endTop=false;
         }
     }
 }

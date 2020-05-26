@@ -28,7 +28,12 @@ public class Matrix {
     }
 
     /**
-     * From the zero elements of the <code>actualMatrix</code> a random zero turns into a 2 or a 4.
+     * From the zero elements of the <code>actualMatrix</code>
+     * a random zero turns into a 2 or a 4.
+     *
+     * If the row and column indexes are already
+     * chosen in a matrix, this method will chose
+     * other numbers until one of them won't be different.
      *
      * @param actualMatrix A matrix which contains integers.
      */
@@ -64,8 +69,8 @@ public class Matrix {
 
 
     /**
-     * The not zero elements of the <code>actualMatrix</code> go to end of the rows,
-     * while the integers go to the beginning of the rows.
+     * Going-over the <code>actualMatrix</code>
+     * starting with the last element of the matrix.
      *
      * @param actualMatrix A matrix which contains integers.
      */
@@ -121,7 +126,8 @@ public class Matrix {
 
     /**
      * This method rotates the matrix in the middle.
-     * It swaps the elements which are in the same distance.
+     * It swaps the rows which are in the same distance
+     * form each other.
      *
      * @param actualMatrix A matrix which contains integers.
      */

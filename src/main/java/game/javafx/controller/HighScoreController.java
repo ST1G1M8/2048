@@ -94,8 +94,8 @@ public class HighScoreController {
 
     public void handleCloseButton(ActionEvent actionEvent){
         log.debug("{} is pressed", ((Button) actionEvent.getSource()).getText());
+        log.info("The Application is closing...");
         Platform.exit();
-        log.info("The Application is closed.");
     }
 
 }

@@ -16,9 +16,12 @@
         </TableView>
         <Label alignment="CENTER" contentDisplay="CENTER" layoutY="32.0" prefWidth="800.0" text="High Scores" textFill="#6f0000">
             <font>
-                <Font size="22.0" />
+                <Font size="28.0" />
             </font>
         </Label>
-        <Button layoutX="340.0" layoutY="500.0" mnemonicParsing="false" onAction="#handleCloseButton" prefHeight="51.0" prefWidth="122.0" text="Close" />
+        <Button layoutX="340.0" layoutY="500.0" mnemonicParsing="false" onAction="#handleCloseButton" prefHeight="51.0" prefWidth="122.0" text="Close">
+         <font>
+            <Font size="22.0" />
+         </font></Button>
     </children>
 </Pane>

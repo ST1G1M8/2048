@@ -128,22 +128,22 @@
             <children>
                 <Label text="Time" textFill="#6f0000">
                     <font>
-                        <Font size="24.0" />
+                        <Font size="32.0" />
                     </font>
                 </Label>
                 <Label fx:id="stopWatchLabel" text="00:00:00">
                     <font>
-                        <Font size="24.0" />
+                        <Font size="28.0" />
                     </font>
                 </Label>
                 <Label text="Steps" textFill="#6f0000">
                     <font>
-                        <Font size="18.0" />
+                        <Font size="28.0" />
                     </font>
                 </Label>
                 <Label fx:id="stepsLabel" text="0">
                     <font>
-                        <Font size="24.0" />
+                        <Font size="26.0" />
                     </font>
                 </Label>
                 <GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="100.0" prefWidth="300.0" BorderPane.alignment="CENTER">

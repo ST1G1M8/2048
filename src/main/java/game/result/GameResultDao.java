@@ -15,10 +15,12 @@ public class GameResultDao extends GenericJpaDao<GameResult> {
     }
 
     /**
-     * Returns the list of {@code n} latest results for solving the puzzle.
+     * Returns the list of {@code n} latest results
+     * for solving the puzzle.
      *
      * @param n the maximum number of results to be returned
-     * @return the list of {@code n} latest results for solving the puzzle.
+     * @return the list of {@code n} latest results
+     * for solving the puzzle.
      */
     @Transactional
     public List<GameResult> findBest(int n) {

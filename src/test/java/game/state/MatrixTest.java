@@ -11,7 +11,21 @@ class MatrixTest {
     public void testStartMatrix() {
         int[][] testMatrix = startMatrix(4,4);
         assertTrue(testMatrix.length == 4);
-        assertTrue(testMatrix.length == 4);
+        assertTrue(testMatrix[0].length == 4);
+    }
+
+    @Test
+    public void testStartMatrix2() {
+        int added = 0;
+        int[][] actualMatrix = startMatrix(4,4);
+        for (int i=0;i<4;i++){
+            for (int j=0;j<4;j++){
+                if (actualMatrix[i][j] != 0){
+                    added++;
+                }
+            }
+        }
+        assertTrue(added==2);
     }
 
     @Test
@@ -33,6 +47,7 @@ class MatrixTest {
     public void testBejaras(){
         int[][] testMatrix = new int[4][4];
         int zeros = 0;
+        Matrix.bejaras(testMatrix);
         for(int i=0;i<4;i++){
             for(int j=0;j<4;j++){
                 if (testMatrix[i][j] == 0) {

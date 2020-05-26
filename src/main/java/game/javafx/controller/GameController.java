@@ -1,41 +1,25 @@
 package game.javafx.controller;
 
-import game.state.Matrix;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Platform;
-import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.input.KeyEvent;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.Pane;
-import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.time.DurationFormatUtils;
 import game.result.GameResult;
 import game.result.GameResultDao;
-import org.slf4j.LoggerFactory;
 
 import javax.inject.Inject;
 import java.io.IOException;
-import java.net.URL;
-import java.rmi.activation.ActivationID;
 import java.time.Duration;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
@@ -139,6 +123,7 @@ public class GameController {
             labels.add(label15);
         }
     }
+
     private void konfiguracio() throws IOException {
         label0.setText("" + actualMatrix[0][0] + "");
         label1.setText("" + actualMatrix[0][1] + "");
@@ -158,7 +143,6 @@ public class GameController {
         label15.setText("" + actualMatrix[3][3] + "");
         labelhatter();
         gameOver();
-
     }
 
     private void labelhatter() {
@@ -205,12 +189,14 @@ public class GameController {
             }
         }
     }
+
     @FXML
     private void fel() throws IOException{
         felhiv(actualMatrix);
         konfiguracio();
         steps.set(steps.get() + 1);
     }
+
     @FXML
     private void le() throws IOException{
         lehiv(actualMatrix);
@@ -218,12 +204,14 @@ public class GameController {
         steps.set(steps.get() + 1);
 
     }
+
     @FXML
     private void balra() throws IOException{
         balrahiv(actualMatrix);
         konfiguracio();
         steps.set(steps.get() + 1);
     }
+
     @FXML
     private void jobbra() throws IOException{
         jobbrahiv(actualMatrix);
@@ -234,35 +222,27 @@ public class GameController {
     @FXML
     private void gameOver() throws IOException{
         for(int i=0;i<16;i++){
-            if(labels.get(i).getText().equals("2048")){
-
+            if(labels.get(i).getText().equals("16")){
                 solv = true;
                 log.info("Game Over");
                 log.info("You Win");
                 log.debug("Saving result to database...");
                 gameResultDao.persist(createGameResult());
-
                 fxmlLoader.setLocation(getClass().getResource("/fxml/highscore.fxml"));
                 Parent root = fxmlLoader.load();
                 rootPane.getChildren().setAll(root);
-
             }
         }
 
-        if(vege1==true && vege2==true && vege3==true && vege4==true){
-
+        if(endLeft==true && endRight==true && endBottom==true && endTop==true){
             solv = false;
             log.info("Game Over");
             log.info("You Lose");
-
             fxmlLoader.setLocation(getClass().getResource("/fxml/highscore.fxml"));
             Parent root = fxmlLoader.load();
             rootPane.getChildren().setAll(root);
-
         }
-
     }
-
 
     @FXML
     public void initialize() throws IOException{
@@ -287,7 +267,6 @@ public class GameController {
         log.info("Resetting game...");
         stopWatchTimeline.stop();
         resetGame();
-
     }
 
     public void handleExitButton(ActionEvent actionEvent) throws IOException {
