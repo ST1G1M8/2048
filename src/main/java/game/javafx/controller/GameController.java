@@ -222,7 +222,7 @@ public class GameController {
     @FXML
     private void gameOver() throws IOException{
         for(int i=0;i<16;i++){
-            if(labels.get(i).getText().equals("16")){
+            if(labels.get(i).getText().equals("2048")){
                 solv = true;
                 log.info("Game Over");
                 log.info("You Win");
