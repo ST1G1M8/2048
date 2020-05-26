@@ -87,6 +87,46 @@ class MatrixTest {
     }
 
     @Test
+    public void testTranszponalt(){
+        int testMatrix1[][] = {
+                {1,2,3,4},
+                {5,6,7,8},
+                {9,10,11,12},
+                {13,14,15,16} };
+        Matrix.transzponalt(testMatrix1);
+        int testMatrix2[][] = {
+                {1,5,9,13},
+                {2,6,10,14},
+                {3,7,11,15},
+                {4,8,12,16} };
+        for(int i=0;i<4;i++){
+            for(int j=0;j<4;j++){
+                assertTrue(testMatrix1[i][j]==testMatrix2[i][j]);
+            }
+        }
+    }
+
+    @Test
+    public void testKozepforgat(){
+        int testMatrix1[][] = {
+                {1,2,3,4},
+                {5,6,7,8},
+                {9,10,11,12},
+                {13,14,15,16} };
+        Matrix.kozepforgat(testMatrix1);
+        int testMatrix2[][] = {
+                {13,14,15,16},
+                {9,10,11,12},
+                {5,6,7,8},
+                {1,2,3,4} };
+        for(int i=0;i<4;i++){
+            for(int j=0;j<4;j++){
+                assertTrue(testMatrix1[i][j]==testMatrix2[i][j]);
+            }
+        }
+    }
+
+    @Test
     public void testForgatas(){
         int testMatrix1[][] = {
                 {1,2,3,4},

@@ -113,7 +113,7 @@ public class Matrix {
      * @param actualMatrix A matrix which contains integers.
      */
    
-    private static void transzponalt(int actualMatrix[][] ) {
+    public static void transzponalt(int actualMatrix[][] ) {
         for(int i = 0; i < actualMatrix.length; i++){
             for(int j = i+1; j < actualMatrix.length ; j++){
                 int temp = actualMatrix[i][j];
@@ -132,8 +132,8 @@ public class Matrix {
      * @param actualMatrix A matrix which contains integers.
      */
 
-    private static void kozepforgat(int actualMatrix[][]) {
-        int l = actualMatrix.length ;
+    public static void kozepforgat(int actualMatrix[][]) {
+        int l = actualMatrix.length;
         for(int i = 0; i < l/2; i++){
             for(int j = 0;j < l; j++){
                 int temp = actualMatrix[i][j];
