@@ -148,7 +148,7 @@ public class GameController {
     private void labelhatter() {
         for(int i=0;i<16;i++){
             if(null == labels.get(i).getText()){
-                labels.get(i).setStyle("-fx-background-color: #ffffff");
+                labels.get(i).setStyle("-fx-background-color: #fff8dc");
             }else switch (labels.get(i).getText()) {
                 case "2":
                     labels.get(i).setStyle("-fx-background-color: #635a57 ");
@@ -184,7 +184,7 @@ public class GameController {
                     labels.get(i).setStyle("-fx-background-color: #00066f");
                     break;
                 default:
-                    labels.get(i).setStyle("-fx-background-color: #ffffff");
+                    labels.get(i).setStyle("-fx-background-color: #fff8dc");
                     break;
             }
         }
