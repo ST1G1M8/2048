@@ -144,7 +144,7 @@ public class Matrix {
     }
 
     /**
-     * This method rotates the matrix.
+     * This method rotates the matrix by 90 degrees.
      *
      * @param actualMatrix A matrix which contains integers.
      */
