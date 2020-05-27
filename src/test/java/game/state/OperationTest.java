@@ -14,7 +14,7 @@ class OperationTest {
                 {4,4,0,0},
                 {4,4,0,0}};
 
-        Operation.balra(testMatrix);
+        Operation.toLeft(testMatrix);
         int testMatrix2[][] = {
                 {16,0,0,0},
                 {16,0,0,0},
@@ -36,7 +36,7 @@ class OperationTest {
                 {2,2,2,2},
                 {2,2,2,2}};
 
-        Operation.balrahiv(testMatrix);
+        Operation.toLeftCall(testMatrix);
         int testMatrix2[][] = {
                 {4,4,0,0},
                 {4,4,0,0},
@@ -76,7 +76,7 @@ class OperationTest {
                 {2,2,2,2},
                 {2,2,2,2}};
 
-        Operation.jobbrahiv(testMatrix);
+        Operation.toRightCall(testMatrix);
         int testMatrix2[][] = {
                 {0,0,4,4},
                 {0,0,4,4},
@@ -116,7 +116,7 @@ class OperationTest {
                 {2,2,2,2},
                 {2,2,2,2}};
 
-        Operation.lehiv(testMatrix);
+        Operation.toBottomCall(testMatrix);
         int testMatrix2[][] = {
                 {0,0,0,0},
                 {0,0,0,0},
@@ -156,7 +156,7 @@ class OperationTest {
                 {2,2,2,2},
                 {2,2,2,2}};
 
-        Operation.felhiv(testMatrix);
+        Operation.toTopCall(testMatrix);
         int testMatrix2[][] = {
                 {4,4,4,4},
                 {4,4,4,4},

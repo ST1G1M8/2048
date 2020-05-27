@@ -47,7 +47,7 @@ class MatrixTest {
     public void testBejaras(){
         int[][] testMatrix = new int[4][4];
         int zeros = 0;
-        Matrix.bejaras(testMatrix);
+        Matrix.move(testMatrix);
         for(int i=0;i<4;i++){
             for(int j=0;j<4;j++){
                 if (testMatrix[i][j] == 0) {
@@ -61,7 +61,7 @@ class MatrixTest {
     @Test
     public void testOsszed(){
         int[][] testMatrix = new int[4][4];
-        Matrix.osszead(testMatrix);
+        Matrix.sumValue(testMatrix);
         int[][] testMatrix2 = new int[4][4];
         for(int i=0;i<4;i++){
             for(int j=0;j<4;j++){
@@ -73,7 +73,7 @@ class MatrixTest {
                 {5,6,8,8},
                 {9,10,11,12},
                 {13,14,15,16} };
-        Matrix.osszead(testMatrix3);
+        Matrix.sumValue(testMatrix3);
         int testMatrix4[][] = {
                 {1,2,3,4},
                 {5,6,16,0},
@@ -93,7 +93,7 @@ class MatrixTest {
                 {5,6,7,8},
                 {9,10,11,12},
                 {13,14,15,16} };
-        Matrix.transzponalt(testMatrix1);
+        Matrix.transpose(testMatrix1);
         int testMatrix2[][] = {
                 {1,5,9,13},
                 {2,6,10,14},
@@ -113,7 +113,7 @@ class MatrixTest {
                 {5,6,7,8},
                 {9,10,11,12},
                 {13,14,15,16} };
-        Matrix.kozepforgat(testMatrix1);
+        Matrix.middleRotate(testMatrix1);
         int testMatrix2[][] = {
                 {13,14,15,16},
                 {9,10,11,12},
@@ -133,7 +133,7 @@ class MatrixTest {
                 {5,6,7,8},
                 {9,10,11,12},
                 {13,14,15,16} };
-        Matrix.forgatas(testMatrix1);
+        Matrix.rotate(testMatrix1);
         int testMatrix2[][] = {
                 {4,8,12,16},
                 {3,7,11,15},

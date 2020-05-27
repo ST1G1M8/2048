@@ -27,14 +27,14 @@ public class Operation {
      * @param actualMatrix A matrix which contains integers.
      */
 
-    public static void balra(int actualMatrix[][]){
-        bejaras(actualMatrix);
-        bejaras(actualMatrix);
-        bejaras(actualMatrix);
-        osszead(actualMatrix);
-        bejaras(actualMatrix);
-        bejaras(actualMatrix);
-        bejaras(actualMatrix);
+    public static void toLeft(int actualMatrix[][]){
+        move(actualMatrix);
+        move(actualMatrix);
+        move(actualMatrix);
+        sumValue(actualMatrix);
+        move(actualMatrix);
+        move(actualMatrix);
+        move(actualMatrix);
 
     }
 
@@ -46,22 +46,22 @@ public class Operation {
      * @param actualMatrix A matrix which contains integers.
      */
 
-    public static void balrahiv(int actualMatrix[][]){
-        int[][] seged = new int[actualMatrix.length][];
+    public static void toLeftCall(int actualMatrix[][]){
+        int[][] helper = new int[actualMatrix.length][];
         for(int i = 0; i < actualMatrix.length; i++){
-            seged[i] = new int[actualMatrix[i].length];
-            System.arraycopy(actualMatrix[i], 0, seged[i], 0, actualMatrix[i].length);
+            helper[i] = new int[actualMatrix[i].length];
+            System.arraycopy(actualMatrix[i], 0, helper[i], 0, actualMatrix[i].length);
         }
-        balra(actualMatrix);
-        boolean azonosak=true;
+        toLeft(actualMatrix);
+        boolean same=true;
         for(int i=0;i<4;i++){
             for(int j=0;j<4;j++){
-                if(actualMatrix[i][j]!=seged[i][j]){
-                    azonosak=false;
+                if(actualMatrix[i][j]!=helper[i][j]){
+                    same=false;
                 }
             }
         }
-        if(azonosak) {
+        if(same) {
             endLeft=true;
         }else{
             add(actualMatrix);
@@ -82,26 +82,26 @@ public class Operation {
      */
 
 
-    public static void jobbrahiv(int actualMatrix[][]){
-        int[][] seged = new int[actualMatrix.length][];
+    public static void toRightCall(int actualMatrix[][]){
+        int[][] helper = new int[actualMatrix.length][];
         for(int i = 0; i < actualMatrix.length; i++){
-            seged[i] = new int[actualMatrix[i].length];
-            System.arraycopy(actualMatrix[i], 0, seged[i], 0, actualMatrix[i].length);
+            helper[i] = new int[actualMatrix[i].length];
+            System.arraycopy(actualMatrix[i], 0, helper[i], 0, actualMatrix[i].length);
         }
-        forgatas(actualMatrix);
-        forgatas(actualMatrix);
-        balra(actualMatrix);
-        forgatas(actualMatrix);
-        forgatas(actualMatrix);
-        boolean azonosak=true;
+        rotate(actualMatrix);
+        rotate(actualMatrix);
+        toLeft(actualMatrix);
+        rotate(actualMatrix);
+        rotate(actualMatrix);
+        boolean same=true;
         for(int i=0;i<4;i++){
             for(int j=0;j<4;j++){
-                if(actualMatrix[i][j]!=seged[i][j]){
-                    azonosak=false;
+                if(actualMatrix[i][j]!=helper[i][j]){
+                    same=false;
                 }
             }
         }
-        if(azonosak){
+        if(same){
             endRight=true;
         }else{
             add(actualMatrix);
@@ -121,26 +121,26 @@ public class Operation {
      * @param actualMatrix A matrix which contains integers.
      */
 
-    public static void lehiv(int actualMatrix[][]){
-        int[][] seged = new int[actualMatrix.length][];
+    public static void toBottomCall(int actualMatrix[][]){
+        int[][] helper = new int[actualMatrix.length][];
         for(int i = 0; i < actualMatrix.length; i++){
-            seged[i] = new int[actualMatrix[i].length];
-            System.arraycopy(actualMatrix[i], 0, seged[i], 0, actualMatrix[i].length);
+            helper[i] = new int[actualMatrix[i].length];
+            System.arraycopy(actualMatrix[i], 0, helper[i], 0, actualMatrix[i].length);
         }
-        forgatas(actualMatrix);
-        forgatas(actualMatrix);
-        forgatas(actualMatrix);
-        balra(actualMatrix);
-        forgatas(actualMatrix);
-        boolean azonosak=true;
+        rotate(actualMatrix);
+        rotate(actualMatrix);
+        rotate(actualMatrix);
+        toLeft(actualMatrix);
+        rotate(actualMatrix);
+        boolean same=true;
         for(int i=0;i<4;i++){
             for(int j=0;j<4;j++){
-                if(actualMatrix[i][j]!=seged[i][j]){
-                    azonosak=false;
+                if(actualMatrix[i][j]!=helper[i][j]){
+                    same=false;
                 }
             }
         }
-        if(azonosak){
+        if(same){
             endBottom=true;
         }else{
             add(actualMatrix);
@@ -160,26 +160,26 @@ public class Operation {
      * @param actualMatrix A matrix which contains integers.
      */
 
-    public static void felhiv(int actualMatrix[][]){
-        int[][] seged = new int[actualMatrix.length][];
+    public static void toTopCall(int actualMatrix[][]){
+        int[][] helper = new int[actualMatrix.length][];
         for(int i = 0; i < actualMatrix.length; i++){
-            seged[i] = new int[actualMatrix[i].length];
-            System.arraycopy(actualMatrix[i], 0, seged[i], 0, actualMatrix[i].length);
+            helper[i] = new int[actualMatrix[i].length];
+            System.arraycopy(actualMatrix[i], 0, helper[i], 0, actualMatrix[i].length);
         }
-        forgatas(actualMatrix);
-        balra(actualMatrix);
-        forgatas(actualMatrix);
-        forgatas(actualMatrix);
-        forgatas(actualMatrix);
-        boolean azonosak=true;
+        rotate(actualMatrix);
+        toLeft(actualMatrix);
+        rotate(actualMatrix);
+        rotate(actualMatrix);
+        rotate(actualMatrix);
+        boolean same=true;
         for(int i=0;i<4;i++){
             for(int j=0;j<4;j++){
-                if(actualMatrix[i][j]!=seged[i][j]){
-                    azonosak=false;
+                if(actualMatrix[i][j]!=helper[i][j]){
+                    same=false;
                 }
             }
         }
-        if(azonosak){
+        if(same){
             endTop=true;
         }else{
             add(actualMatrix);

@@ -103,7 +103,7 @@ public class GameController {
 
     ArrayList<Label> labels=new ArrayList<>();
 
-    private void labelhozzadas(){
+    private void addLabel(){
         for(int i=0;i<16;i++){
             labels.add(label0);
             labels.add(label1);
@@ -124,7 +124,7 @@ public class GameController {
         }
     }
 
-    private void konfiguracio() throws IOException {
+    private void configuration() throws IOException {
         label0.setText("" + actualMatrix[0][0] + "");
         label1.setText("" + actualMatrix[0][1] + "");
         label2.setText("" + actualMatrix[0][2] + "");
@@ -141,11 +141,11 @@ public class GameController {
         label13.setText("" + actualMatrix[3][1] + "");
         label14.setText("" + actualMatrix[3][2] + "");
         label15.setText("" + actualMatrix[3][3] + "");
-        labelhatter();
+        labelBackground();
         gameOver();
     }
 
-    private void labelhatter() {
+    private void labelBackground() {
         for(int i=0;i<16;i++){
             if(null == labels.get(i).getText()){
                 labels.get(i).setStyle("-fx-background-color: #fff8dc");
@@ -191,31 +191,31 @@ public class GameController {
     }
 
     @FXML
-    private void fel() throws IOException{
-        felhiv(actualMatrix);
-        konfiguracio();
+    private void up() throws IOException{
+        toTopCall(actualMatrix);
+        configuration();
         steps.set(steps.get() + 1);
     }
 
     @FXML
-    private void le() throws IOException{
-        lehiv(actualMatrix);
-        konfiguracio();
+    private void down() throws IOException{
+        toBottomCall(actualMatrix);
+        configuration();
         steps.set(steps.get() + 1);
 
     }
 
     @FXML
-    private void balra() throws IOException{
-        balrahiv(actualMatrix);
-        konfiguracio();
+    private void left() throws IOException{
+        toLeftCall(actualMatrix);
+        configuration();
         steps.set(steps.get() + 1);
     }
 
     @FXML
-    private void jobbra() throws IOException{
-        jobbrahiv(actualMatrix);
-        konfiguracio();
+    private void right() throws IOException{
+        toRightCall(actualMatrix);
+        configuration();
         steps.set(steps.get() + 1);
     }
 
@@ -246,8 +246,8 @@ public class GameController {
 
     @FXML
     public void initialize() throws IOException{
-        labelhozzadas();
-        konfiguracio();
+        addLabel();
+        configuration();
         stepsLabel.textProperty().bind(steps.asString());
         resetGame();
     }
@@ -258,7 +258,7 @@ public class GameController {
         actualMatrix = startMatrix(4,4);
         steps.set(0);
         startTime = Instant.now();
-        konfiguracio();
+        configuration();
         createStopWatch();
     }
 

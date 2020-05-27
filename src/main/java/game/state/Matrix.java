@@ -75,7 +75,7 @@ public class Matrix {
      * @param actualMatrix A matrix which contains integers.
      */
 
-    public static void bejaras(int actualMatrix[][]){
+    public static void move(int actualMatrix[][]){
         for(int i=actualMatrix.length-1;i>=0;i--){
             for(int j=actualMatrix.length-1;j>=0;j--){
                 if(j!=0 && actualMatrix[i][j]!=0 && actualMatrix[i][j-1]==0){
@@ -95,7 +95,7 @@ public class Matrix {
      * @param actualMatrix A matrix which contains integers.
      */
     
-    public static void osszead(int actualMatrix[][]){
+    public static void sumValue(int actualMatrix[][]){
         for (int[] subMatrix : actualMatrix) {
             for (int j = 0; j<actualMatrix.length; j++) {
                 if (j!=actualMatrix.length-1 && subMatrix[j] == subMatrix[j+1]) {
@@ -113,7 +113,7 @@ public class Matrix {
      * @param actualMatrix A matrix which contains integers.
      */
    
-    public static void transzponalt(int actualMatrix[][] ) {
+    public static void transpose(int actualMatrix[][] ) {
         for(int i = 0; i < actualMatrix.length; i++){
             for(int j = i+1; j < actualMatrix.length ; j++){
                 int temp = actualMatrix[i][j];
@@ -132,7 +132,7 @@ public class Matrix {
      * @param actualMatrix A matrix which contains integers.
      */
 
-    public static void kozepforgat(int actualMatrix[][]) {
+    public static void middleRotate(int actualMatrix[][]) {
         int l = actualMatrix.length;
         for(int i = 0; i < l/2; i++){
             for(int j = 0;j < l; j++){
@@ -149,13 +149,13 @@ public class Matrix {
      * @param actualMatrix A matrix which contains integers.
      */
 
-    public static void forgatas(int actualMatrix[][] ){
+    public static void rotate(int actualMatrix[][] ){
         if(actualMatrix == null)
             return;
         if(actualMatrix.length != actualMatrix[0].length)
             return;
-        transzponalt(actualMatrix);
-        kozepforgat(actualMatrix);
+        transpose(actualMatrix);
+        middleRotate(actualMatrix);
     }
 }     
 

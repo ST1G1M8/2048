@@ -158,22 +158,22 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                     <children>
-                        <Button fx:id="button" mnemonicParsing="false" onAction="#fel" prefHeight="33.0" prefWidth="100.0" stylesheets="@../styles/Styles.css" text="Up" GridPane.columnIndex="1">
+                        <Button fx:id="button" mnemonicParsing="false" onAction="#up" prefHeight="33.0" prefWidth="100.0" stylesheets="@../styles/Styles.css" text="Up" GridPane.columnIndex="1">
                             <font>
                                 <Font size="18.0" />
                             </font>
                         </Button>
-                        <Button fx:id="button1" mnemonicParsing="false" onAction="#le" prefHeight="33.0" prefWidth="100.0" stylesheets="@../styles/Styles.css" text="Down" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                        <Button fx:id="button1" mnemonicParsing="false" onAction="#down" prefHeight="33.0" prefWidth="100.0" stylesheets="@../styles/Styles.css" text="Down" GridPane.columnIndex="1" GridPane.rowIndex="2">
                             <font>
                                 <Font size="18.0" />
                             </font>
                         </Button>
-                        <Button fx:id="button11" mnemonicParsing="false" onAction="#balra" prefHeight="33.0" prefWidth="100.0" stylesheets="@../styles/Styles.css" text="Left" GridPane.rowIndex="1">
+                        <Button fx:id="button11" mnemonicParsing="false" onAction="#left" prefHeight="33.0" prefWidth="100.0" stylesheets="@../styles/Styles.css" text="Left" GridPane.rowIndex="1">
                             <font>
                                 <Font size="18.0" />
                             </font>
                         </Button>
-                        <Button fx:id="button111" mnemonicParsing="false" onAction="#jobbra" prefHeight="33.0" prefWidth="100.0" stylesheets="@../styles/Styles.css" text="Right" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                        <Button fx:id="button111" mnemonicParsing="false" onAction="#right" prefHeight="33.0" prefWidth="100.0" stylesheets="@../styles/Styles.css" text="Right" GridPane.columnIndex="2" GridPane.rowIndex="1">
                             <font>
                                 <Font size="18.0" />
                             </font>
