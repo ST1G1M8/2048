@@ -1,14 +1,24 @@
 # 2048 
 
-A 2048 nevű játék implementálása. A feladatunk, hogy úgy tologassuk a csempéket, hogy kijöjjön a 2048. (csak azonos számok adhatók össze)
-A projekt a Szoftverfejlesztés nevű tárgyra készült.
+This is an implementation of the classic 2048 Game, which I created for a University project.
 
-## Verziószám
+## Version
 
 1.0
 
-#### Megjegyzés
+## Game
 
-Amikor már úgy látjuk, hogy semerre se tudunk lépni, próbáljunk meg egyszer mind a négy irányba elmozdulni.
-Ha igazunk volt és ugyanabban az állapotban maradtunk, mint előtte, akkor vesztettünk.
-Ilyenkor az applikáció átvált egy másik képernyőre, ahol azon felhasználókról láthatunk információt, akik sikeresen megnyerték a játékot.
+This is a single-player game, which is played on a 4x4 grid. 
+Our objective is to move the numbered tiles and combining to create a tile with the number 2048.
+(Be aware, that you can only merge 2 tiles if they have the same numerical value)
+
+## Requirements
+
+Building the project requires JDK 11 or later and [Apache Maven](https://maven.apache.org/)
+
+### Comment
+
+Whn it seems that we can't move to any direction, let's try each.
+If we were right and we stayed in the same state, as we were in before, then we lose.
+In that case the application moves to another screne, where we can read information about those players,
+who had successfully won the game before.
