@@ -44,7 +44,7 @@ class MatrixTest {
     }
 
     @Test
-    public void testBejaras(){
+    public void testMove(){
         int[][] testMatrix = new int[4][4];
         int zeros = 0;
         Matrix.move(testMatrix);
@@ -59,7 +59,7 @@ class MatrixTest {
     }
 
     @Test
-    public void testOsszed(){
+    public void testSumValue(){
         int[][] testMatrix = new int[4][4];
         Matrix.sumValue(testMatrix);
         int[][] testMatrix2 = new int[4][4];
@@ -87,7 +87,7 @@ class MatrixTest {
     }
 
     @Test
-    public void testTranszponalt(){
+    public void testTranspose(){
         int testMatrix1[][] = {
                 {1,2,3,4},
                 {5,6,7,8},
@@ -107,7 +107,7 @@ class MatrixTest {
     }
 
     @Test
-    public void testKozepforgat(){
+    public void testMiddleRotate(){
         int testMatrix1[][] = {
                 {1,2,3,4},
                 {5,6,7,8},
@@ -127,7 +127,7 @@ class MatrixTest {
     }
 
     @Test
-    public void testForgatas(){
+    public void testRotate(){
         int testMatrix1[][] = {
                 {1,2,3,4},
                 {5,6,7,8},

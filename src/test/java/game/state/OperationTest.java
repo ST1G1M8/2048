@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class OperationTest {
 
     @Test
-    public void testBalra(){
+    public void testToLeft(){
         int testMatrix[][] = {
                 {8,8,0,0},
                 {8,8,0,0},
@@ -29,7 +29,7 @@ class OperationTest {
     }
 
     @Test
-    public void testBalrahiv(){
+    public void testToLeftCall(){
         int testMatrix[][] = {
                 {2,2,2,2},
                 {2,2,2,2},
@@ -69,7 +69,7 @@ class OperationTest {
     }
 
     @Test
-    public void testJobbrahiv(){
+    public void testToRightCall(){
         int testMatrix[][] = {
                 {2,2,2,2},
                 {2,2,2,2},
@@ -109,7 +109,7 @@ class OperationTest {
     }
 
     @Test
-    public void testLehiv(){
+    public void testToBottomCall(){
         int testMatrix[][] = {
                 {2,2,2,2},
                 {2,2,2,2},
@@ -149,7 +149,7 @@ class OperationTest {
     }
 
     @Test
-    public void testFelhiv(){
+    public void testToTopCall(){
         int testMatrix[][] = {
                 {2,2,2,2},
                 {2,2,2,2},
